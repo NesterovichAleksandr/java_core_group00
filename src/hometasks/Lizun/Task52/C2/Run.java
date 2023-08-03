@@ -1,4 +1,4 @@
-package TaskPlant;
+package hometasks.Lizun.Task52.C2;
 
 public class Run {
     public static void main(String[] args) {

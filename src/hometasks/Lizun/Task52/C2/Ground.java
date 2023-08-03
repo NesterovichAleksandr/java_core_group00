@@ -1,6 +1,6 @@
-package TaskPlant;
+package hometasks.Lizun.Task52.C2;
 
-public class Ground extends Plant{
+public class Ground extends Plant {
 
 
     String kind;

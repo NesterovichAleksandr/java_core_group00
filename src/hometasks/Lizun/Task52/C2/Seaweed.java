@@ -1,4 +1,4 @@
-package TaskPlant;
+package hometasks.Lizun.Task52.C2;
 
 public class Seaweed extends Plant{
     public Seaweed(String name, boolean perennials) {
