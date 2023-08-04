@@ -4,5 +4,6 @@ public class Mammals extends Animal {
 
     public void voice() {
 
+
     }
 }

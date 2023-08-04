@@ -4,5 +4,6 @@ public class Whales extends SeaSpecies {
 
     public void voice() {
 
+
     }
 }
