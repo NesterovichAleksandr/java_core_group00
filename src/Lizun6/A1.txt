@@ -1,0 +1,6 @@
+Три строки будет храниться в String Pool:
+
+     1.   String s1 = "Cat1";
+     2.   String s2 = "Cat";
+        String s3 = new String ("Cat"); // эта не заносится в стринг пул
+     3.   String s4 = s3.intern();
