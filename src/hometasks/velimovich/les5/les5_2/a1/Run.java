@@ -6,5 +6,4 @@ public class Run extends Car {
         Car bmw = new Car();
         Car audi = new Car();
     }
-
 }
