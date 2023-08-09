@@ -1,4 +1,4 @@
-package hometasks.surname.lesson1.a2.task3;
+package hometasks.Getman.lesson1.a2.task3;
 
 public class WildAnimal extends Animal{
     public void voice(){

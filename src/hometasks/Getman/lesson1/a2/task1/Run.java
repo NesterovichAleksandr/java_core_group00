@@ -1,4 +1,4 @@
-package hometasks.surname.lesson1.a2.task1;
+package hometasks.Getman.lesson1.a2.task1;
 
 public class Run {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package hometasks.surname.lesson1.a2.task2;
+package hometasks.Getman.lesson1.a2.task2;
 
 public class Person {
     private String name;
