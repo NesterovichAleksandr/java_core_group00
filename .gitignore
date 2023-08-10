@@ -4,6 +4,7 @@ out/
 !**/src/test/**/out/
 .idea/*
 
+
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -28,3 +29,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/hometasks/Getman/lesson1/b2/task2/task2.txt
