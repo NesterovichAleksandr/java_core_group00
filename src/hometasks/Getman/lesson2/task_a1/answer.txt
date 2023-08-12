@@ -1,0 +1,1 @@
+В String pool будет 2 строки "Cat" "Cat1"
