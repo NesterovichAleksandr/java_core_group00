@@ -1,6 +1,6 @@
-package hometasks.lesson5.task2.lvlB._3;
+package hometasks.lesson5.task2.lvlB._3_and_4;
 
-public class Run {
+public class Main {
     public static void main(String[] args) {
         Hummingbird hummingbird = new Hummingbird();
         Macaw macaw = new Macaw();
@@ -11,7 +11,7 @@ public class Run {
 
         hummingbird.voice();
         macaw.voice();
-        penguin.voice();
+        pigeon.voice();
         kiwis.voice();
         ostrich.voice();
         penguin.voice();
