@@ -5,7 +5,7 @@ import hometasks.getman.util.Util;
 import java.util.regex.Pattern;
 
 public class Regex {
-    public final static String REGEX_NUM_PHONE = "((8|\\+7|\\+375)[\\- ]?)(\\(?\\d{1,3}\\)?[\\- ]?)?[\\d\\- ]{7,10}";
+    public final static String REGEX_NUM_PHONE = "((8|\\+7|\\+375)[- ]?)(\\(?\\d{1,3}\\)?[- ]?)?[\\d- ]{7,10}";
     public final static String REGEX_EMAIL = "[A-Za-z0-9+_.-]{3,}+@(\\w+\\.+\\w{1,3})";
     public final static String REGEX_DATE = "(0[1-9]|[1-2][0-9]|3[0-1])[- /.](0[1-9]|1[1-2])[- /.](19|20)\\d\\d";
 
