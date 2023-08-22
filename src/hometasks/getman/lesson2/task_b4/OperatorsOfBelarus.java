@@ -1,21 +1,21 @@
 package hometasks.getman.lesson2.task_b4;
 
 public enum OperatorsOfBelarus {
-    VELCOM_A1("VELCOM",44,29),
-    MTS("MTS",33,29),
-    LIFE("MTS",25);
+    VELCOM_A1("VELCOM","44","29"),
+    MTS("MTS","33","29"),
+    LIFE("MTS","25");
 
     private String nameOfOperator;
-    private int prefix;
-    private int prefix2;
+    private String prefix;
+    private String prefix2;
 
-    OperatorsOfBelarus(String nameOfOperator, int prefix, int prefix2) {
+    OperatorsOfBelarus(String nameOfOperator, String prefix, String prefix2) {
         this.nameOfOperator = nameOfOperator;
         this.prefix = prefix;
         this.prefix2 = prefix2;
     }
 
-    OperatorsOfBelarus(String nameOfOperator, int prefix) {
+    OperatorsOfBelarus(String nameOfOperator, String prefix) {
         this.nameOfOperator = nameOfOperator;
         this.prefix = prefix;
     }
@@ -28,19 +28,19 @@ public enum OperatorsOfBelarus {
         this.nameOfOperator = nameOfOperator;
     }
 
-    public int getPrefix() {
+    public String getPrefix() {
         return prefix;
     }
 
-    public void setPrefix(int prefix) {
+    public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
 
-    public int getPrefix2() {
+    public String getPrefix2() {
         return prefix2;
     }
 
-    public void setPrefix2(int prefix2) {
+    public void setPrefix2(String prefix2) {
         this.prefix2 = prefix2;
     }
 }

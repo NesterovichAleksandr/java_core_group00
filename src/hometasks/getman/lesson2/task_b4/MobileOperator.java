@@ -13,29 +13,37 @@ public class MobileOperator {
 
     public static void main(String[] args) {
 
-           /* String filePath = "D:\\Movies\\Futurama.mp4";
-            int lastFileSeparatorIndex = filePath.lastIndexOf('\\');
-            String fileName = filePath.substring(lastFileSeparatorIndex + 1);
-            System.out.println(fileName); //9*/
 
-        String number= Util.scannerString();
+        String number = Util.scannerString();
         Pattern numberPhone = Pattern.compile(REGEX_NUM_PHONE);
         String prefix;
         String firstNumber;
         if (numberPhone.matcher(number).matches()) {
-            prefix=number.substring(4,6);
-            System.out.println(prefix);
+            prefix = number.substring(4, 6);
+            firstNumber = number.substring(6, 7);
+            if (prefix.equals(OperatorsOfBelarus.LIFE.getPrefix())) {
+                System.out.println("This is " + OperatorsOfBelarus.LIFE.getNameOfOperator());
+            } else if (prefix.equals(OperatorsOfBelarus.MTS.getPrefix())) {
+                System.out.println("This is " + OperatorsOfBelarus.MTS.getNameOfOperator());
 
+            } else if (prefix.equals(OperatorsOfBelarus.VELCOM_A1.getPrefix())) {
+                System.out.println("This is " + OperatorsOfBelarus.VELCOM_A1.getNameOfOperator());
+            } else if (prefix.equals(OperatorsOfBelarus.VELCOM_A1.getPrefix2())) {
+                if (firstNumber.equals("6") || firstNumber.equals("3") || firstNumber.equals("1")) {
+                    System.out.println("This is " + OperatorsOfBelarus.VELCOM_A1.getNameOfOperator());
+                } else if (firstNumber.equals("7") || firstNumber.equals("8") || firstNumber.equals("5")) {
+                    System.out.println("This is " + OperatorsOfBelarus.MTS.getNameOfOperator());
 
-
-
-
-
-            System.out.println("This is phone number - " + number);
-        }else {
+                } else {
+                    System.out.println("Incorrect phone number");
+                }
+            } else {
+                System.out.println("Incorrect number of operator");
+            }
+        } else {
             System.out.println("Incorrect phone number - " + number);
-        }
 
+        }
 
 
     }
