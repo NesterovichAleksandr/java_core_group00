@@ -7,8 +7,11 @@ import java.util.regex.Pattern;
 
 public class Vowel {
     public static void main(String[] args) {
+        Vowel.vowel(Util.scannerString());
+    }
+
+    public static void vowel(String text) {
         int count = 0;
-        String text = Util.scannerString();
         Pattern vowel = Pattern.compile("[aeiouy]|[аоэеиыуёюя]");
         Matcher findVowel = vowel.matcher(text.toLowerCase());
         while (findVowel.find()) {
