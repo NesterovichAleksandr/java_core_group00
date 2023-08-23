@@ -13,9 +13,9 @@ public class A3 {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
 
-        if (str.startsWith("{", 0) & !str.startsWith("{", 1)) {
+        if (str.startsWith("{", 0) && !str.startsWith("{", 1)) {
             System.out.println("Вы ввели " + str + " это вектор");
-        } else if (str.startsWith("{", 0) & str.startsWith("{", 1)) {
+        } else if (str.startsWith("{", 0) && str.startsWith("{", 1)) {
             System.out.println("Вы ввели " + str + " это матрица");
         } else {
             System.out.println(" Вы ввели " + str + " это скаляр");
