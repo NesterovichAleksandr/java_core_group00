@@ -7,6 +7,9 @@ public class B1 {
         System.out.println("Введите слово или число");
         B1.palindrome();
     }
+
+    // Напишите метод, который на вход принимает слово, а на выходе говорит это слово палиндром или нет.
+    // что-то не вижу методов сдесь, которые на вход принимают строку)
     static void palindrome() {
         Scanner scanner = new Scanner(System.in);
         String word = scanner.nextLine();
