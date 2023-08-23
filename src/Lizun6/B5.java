@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class B5 {
     public static void main(String[] args) {
+        // это стихотворение нужно было достать из готового файла, а не копировать)
         String versh = "Трэба дома бываць часцей,\n" +
                 "Трэба дома бываць не госцем,\n" +
                 "Каб душою не ачарсцвець,\n" +
@@ -45,3 +46,11 @@ public class B5 {
         }
     }
 }
+/*
+мне всегда выводит:
+i
+I
+iржышчы
+I
+
+ */
