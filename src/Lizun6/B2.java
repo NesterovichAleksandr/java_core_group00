@@ -7,6 +7,8 @@ public class B2 {
         System.out.println("Введите предложение ");
         B2.countWord();
     }
+
+    // тут аналогично с предыдущим заданием. нет метода, который принимает на вход строку.
     static void countWord() {
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
