@@ -14,8 +14,12 @@ public class Student {
         this.group = group;
         this.averageMark = averageMark;
     }
-    public void printAboutStudent () {
+
+    //Создайте метод, который будет выводить в консоль всю информацию о студенте.
+    // студент - это класс. для вывода информации о классе есть стандартный метод toString.
+    // поэтому корректнее было бы переопределить метод toString, а не создавать printAboutStudent
+    public void printAboutStudent() {
         System.out.println("Student " + surname + " " + name + ", age is " + age
-        + ", group number " + group + ", averageMark is " + averageMark);
+                + ", group number " + group + ", averageMark is " + averageMark);
     }
 }
