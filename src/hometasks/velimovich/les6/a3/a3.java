@@ -3,6 +3,8 @@ package hometasks.velimovich.les6.a3;
 import java.util.Scanner;
 
 public class a3 {
+
+    // не пойму что за условие задачи такое.
     public static void main(String[] args) {
         System.out.println("Введите число от 0 до 3: ");
         Scanner scan = new Scanner(System.in);
