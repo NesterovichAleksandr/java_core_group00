@@ -8,10 +8,10 @@ public class b1 {
         Scanner scan = new Scanner(System.in);
         String word = scan.next();
         System.out.println("Вы ввели слово " + word);
-        if(word.equals((new StringBuffer(word)).reverse().toString()))
+        if (word.equals((new StringBuffer(word)).reverse().toString()))  // красивое решение!)
             System.out.print("Палиндром");
         else
             System.out.print("Не палиндром");
     }
 
-        }
+}
