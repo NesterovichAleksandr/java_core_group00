@@ -4,6 +4,8 @@ import hometasks.getman.util.Util;
 
 import java.util.regex.Pattern;
 // код написан красиво. но я не могу понять, где ты взял условие для этой задачи?))
+/*Условие задачи выполнил-на вход пришла строка, а на выходе что в ней. Пример про скаляр... я решил,
+что это просто пример, как может выглядеть программа.*/
 public class Regex {
     public final static String REGEX_NUM_PHONE = "((8|\\+7|\\+375)[- ]?)(\\(?\\d{1,3}\\)?[- ]?)?[\\d- ]{7,10}";
     public final static String REGEX_EMAIL = "[A-Za-z0-9+_.-]{3,}+@(\\w+\\.+\\w{1,3})";
@@ -27,6 +29,5 @@ public class Regex {
         } else {
             System.out.println("error");
         }
-
     }
 }
