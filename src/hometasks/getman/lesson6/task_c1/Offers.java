@@ -8,16 +8,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Offers {
-    private String versh;
+    private final String text;
     private List<String> offers;
 
 
-    public Offers(String versh) {
-        this.versh = versh;
+    public Offers(String text) {
+        this.text = text;
     }
 
     public void stringToList() {
-        offers = Arrays.asList(versh.split("\\n"));
+        offers = Arrays.asList(text.split("\\n"));
     }
 
     public void sortList() {
