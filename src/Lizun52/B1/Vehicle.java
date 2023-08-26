@@ -8,6 +8,6 @@ public class Vehicle {
     private boolean music;
 
     public void move() {
-
+        System.out.println("You need to move");
     }
 }
