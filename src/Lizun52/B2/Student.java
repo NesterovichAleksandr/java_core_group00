@@ -18,8 +18,9 @@ public class Student {
     //Создайте метод, который будет выводить в консоль всю информацию о студенте.
     // студент - это класс. для вывода информации о классе есть стандартный метод toString.
     // поэтому корректнее было бы переопределить метод toString, а не создавать printAboutStudent
-    public void printAboutStudent() {
+    public String toString() {
         System.out.println("Student " + surname + " " + name + ", age is " + age
                 + ", group number " + group + ", averageMark is " + averageMark);
+        return null;
     }
 }
