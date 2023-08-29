@@ -8,34 +8,32 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Offers {
-    private final String text;
-    private List<String> offers;
+
+    //Я понимаю, что тема строки и регулярки. Можно просто отсортировать массив.
+    //Просто мне захотелось лямбды потренить.
 
 
-    public Offers(String text) {
-        this.text = text;
+    public Offers() {
+            }
+
+    public List<String> stringToList(String text) {
+        return Arrays.asList(text.split("\\n"));
     }
 
-    public void stringToList() {
-        offers = Arrays.asList(text.split("\\n"));
-    }
-
-    public void sortList() {
-        offers = offers.stream()
+    public List<String> sortList(List<String>textOffers) {
+        return textOffers.stream()
                 .sorted(Comparator.comparing(String::length))
                 .collect(Collectors.toList());
     }
 
-    public void printSortList() {
-        for (String offer : offers) {
+    public void printSortList(List<String>textOffers) {
+        for (String offer : textOffers) {
             System.out.println(offer);
         }
     }
 
     public static void main(String[] args) {
-        Offers offers1 = new Offers(Versh.versh);
-        offers1.stringToList();
-        offers1.sortList();
-        offers1.printSortList();
+        Offers offers1 = new Offers();
+        offers1.printSortList(offers1.sortList(offers1.stringToList(Versh.versh)));
     }
 }
