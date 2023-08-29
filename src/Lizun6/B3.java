@@ -6,17 +6,16 @@ import java.util.regex.Pattern;
 public class B3 {
     public static void main(String[] args) {
 
-        countVowel("I love Java.  And I will learn it. Я люблю Джава...");
-
+        System.out.println(countVowel("I love Java.  And I will learn it. Я люблю Джава...") + " гласных в предложении");
     }
 
-    public static void countVowel(String word) {
+    public static int countVowel(String word) {
         Pattern vowel = Pattern.compile("(?iu)[аеёиоуыэюяeyuioa]");
         Matcher m = vowel.matcher(word);
         int vowelCounter = 0;
         while (m.find()) {
             vowelCounter++;
         }
-        System.out.println("В вашем предложении " + vowelCounter + " гласных ");
+        return vowelCounter;
     }
 }
