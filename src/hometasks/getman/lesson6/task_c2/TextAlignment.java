@@ -29,7 +29,7 @@ public class TextAlignment {
 
     public void formatText() {
 
-        for (int i = 0; i < textForAlignment.split("\\n").length; i++) {
+        for (int i = 0; i < textForAlignment.trim().split("\\n").length; i++) {
             String stringForFormat = textForAlignment.trim().split("\\n")[i];
             if (stringForFormat.isBlank()) {
                 textAfterAlignment.append(addSpacesIsBlank(maxLength)).append("\n");
@@ -39,7 +39,6 @@ public class TextAlignment {
             } else {
                 textAfterAlignment.append(stringForFormat).append("\n");
             }
-
         }
         System.out.println(textAfterAlignment);
     }
@@ -47,25 +46,38 @@ public class TextAlignment {
 
     public StringBuilder deleteSpaces(StringBuilder stringForFormat, int maxLength) {
         StringBuilder forDelete = new StringBuilder(stringForFormat.reverse());
-        Pattern pattern = Pattern.compile("\\s+");
-        Matcher matcher = pattern.matcher(forDelete);
-        String space = " ";
-        while (matcher.find()) {
-            int countOfSpace = matcher.group().length();
-            forDelete.replace(matcher.start(), matcher.end(), space.repeat(countOfSpace - 1));
-            if (forDelete.length() == maxLength) {
-                break;
+        do {
+            Pattern pattern = Pattern.compile("\\s+");
+            Matcher matcher = pattern.matcher(forDelete);
+            String space = " ";
+            while (matcher.find()) {
+                int countOfSpace = matcher.group().length();
+                forDelete.replace(matcher.start(), matcher.end(), space.repeat(countOfSpace - 1));
+                if (forDelete.length() == maxLength) {
+                    break;
+                }
             }
-        }
+        } while (forDelete.length() != maxLength);
         stringForFormat = forDelete.reverse();
 
-       /* do {
-            //forDelete = new StringBuilder();
+        return stringForFormat;
+    }
 
-                    forDelete.append(stringForFormat.reverse().toString().replaceFirst("0{}", "0")).reverse();
-            stringForFormat = forDelete;
+    public StringBuilder addSpaces(StringBuilder stringForFormat, int maxLength) {
 
-        } while (forDelete.length() > maxLength);*/
+        do {
+            Pattern pattern = Pattern.compile("\\s{2,}");
+            Matcher matcher = pattern.matcher(stringForFormat);
+            String space = " ";
+            while (matcher.find()) {
+                int countOfSpace = matcher.group().length();
+                stringForFormat.replace(matcher.start(), matcher.end(), space.repeat(countOfSpace + 1));
+                if (stringForFormat.length() == maxLength) {
+                    break;
+                }
+            }
+        } while (stringForFormat.length() != maxLength);
+
         return stringForFormat;
     }
 
@@ -76,27 +88,20 @@ public class TextAlignment {
 
     public StringBuilder addSpaces(String stringForFormat, int spaces) {
         StringBuilder result = new StringBuilder();
-        int countOfWords = stringForFormat.trim().split("\\s").length;
-        int countOfSpaces = (spaces + (stringForFormat.trim().split("\\s").length - 1)) / countOfWords;
-        for (int i = 0; i < countOfWords - 1; i++) {
-            result.append(stringForFormat.trim().split("\\s")[i]);
-            for (int j = 0; j <= countOfSpaces; j++) {
-                result.append(" ");
-               /* if (result.length() + stringForFormat.trim().split("\\s")[countOfWords - 1].length() >= maxLength) {
-                    break;
-                }*/
-            }
 
+        int countOfWords = stringForFormat.trim().split("\\s+").length;
+        int countOfSpaces = (spaces + (countOfWords - 1)) / countOfWords;
+
+        for (int i = 0; i < countOfWords - 1; i++) {
+            result.append(stringForFormat.trim().split("\\s+")[i]);
+            result.append(" ".repeat(countOfSpaces + 1));
         }
-        if (result.length() + stringForFormat.trim().split("\\s")[countOfWords - 1].length() < maxLength) {
-            result = new StringBuilder(result.toString().replaceFirst(" ", "  "))
-                    .append(stringForFormat.trim().split("\\s")[countOfWords - 1]);
-            /*result= new StringBuilder();
-            result.append(addSpaces(stringForFormat, spaces + 1))
-                    .append(stringForFormat.trim().split("\\s")[countOfWords - 1]);*/
-            // result.append("0").append(stringForFormat.trim().split("\\s")[countOfWords - 1]);
+
+        if (result.length() + stringForFormat.trim().split("\\s+")[countOfWords - 1].length() < maxLength) {
+            result.append(stringForFormat.trim().split("\\s+")[countOfWords - 1]);
+            result = addSpaces(result, maxLength);
         } else {
-            result.append(stringForFormat.trim().split("\\s")[countOfWords - 1]);
+            result.append(stringForFormat.trim().split("\\s+")[countOfWords - 1]);
         }
         if (result.length() > maxLength) {
             return deleteSpaces(result, maxLength);
