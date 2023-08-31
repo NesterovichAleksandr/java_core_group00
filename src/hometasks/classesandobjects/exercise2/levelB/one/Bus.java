@@ -5,4 +5,5 @@ public class Bus extends Vehicle {
         Bus bus = new Bus();
         bus.move();
     }
+    // не решено: В классах наследниках реализуйте метод move().
 }
