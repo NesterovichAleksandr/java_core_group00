@@ -13,7 +13,7 @@ public class B5 {
 
         for (String s : arrayVersh) {
             Matcher mat = newWord.matcher(s);
-            while (mat.find())
+            while (mat.find()) // это условие всегда false, поэтому в консоль ничего не выводится.
                 System.out.println(mat.group());
         }
     }
