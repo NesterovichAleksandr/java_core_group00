@@ -12,17 +12,9 @@ public class B5 {
         String[] arrayVersh = versh.split("\\s");
 
         for (String s : arrayVersh) {
-            Matcher mat = newWord.matcher(s); // вот тут посмотри дебагером что не так в коде.
-            while (mat.find()) // это условие всегда false, поэтому в консоль ничего не выводится.
+            Matcher mat = newWord.matcher(s);
+            while (mat.find())
                 System.out.println(mat.group());
         }
     }
 }
-/*
-мне всегда выводит:
-i
-I
-iржышчы
-I
-
- */
