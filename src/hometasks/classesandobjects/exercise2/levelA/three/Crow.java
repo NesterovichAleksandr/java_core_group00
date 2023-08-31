@@ -5,5 +5,6 @@ public class Crow extends Bird {
         Crow crow = new Crow();
         crow.voice();
     }
+    // не решено: В классах наследниках реализуйте метод voice()
 
 }

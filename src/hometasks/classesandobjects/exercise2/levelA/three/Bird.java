@@ -6,4 +6,6 @@ public class Bird extends Animal {
         bird.voice();
     }
 
+    // не решено: В классах наследниках реализуйте метод voice()
+
 }

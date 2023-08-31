@@ -5,5 +5,6 @@ public class Dog extends Mammal {
         Dog dog = new Dog();
         dog.voice();
     }
+    // не решено: В классах наследниках реализуйте метод voice()
 
 }
