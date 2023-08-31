@@ -4,7 +4,7 @@ public class OldPerson extends Person {
     private int pensionSize;
     @Override
     public void walk() {
-        super.walk();
+        super.walk(); // эта строчка не обязательна.
         System.out.println("Walk slowly");
     }
     public void getPension(){
