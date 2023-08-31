@@ -29,6 +29,7 @@ public class MobileOperator {
                 System.out.println("This is " + OperatorsOfBelarus.VELCOM_A1.getNameOfOperator());
             } else if (prefix.equals(OperatorsOfBelarus.VELCOM_A1.getPrefix2())) {
                 if (firstNumber.equals("6") || firstNumber.equals("3") || firstNumber.equals("1")) {
+                    // а вот за создание третьего вложенного if по пальцам нужно бить! через пол года ты сам будешь плеваться читая такой код)
                     System.out.println("This is " + OperatorsOfBelarus.VELCOM_A1.getNameOfOperator());
                 } else if (firstNumber.equals("7") || firstNumber.equals("8") || firstNumber.equals("5")) {
                     System.out.println("This is " + OperatorsOfBelarus.MTS.getNameOfOperator());
