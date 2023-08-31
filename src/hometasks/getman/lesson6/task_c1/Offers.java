@@ -17,6 +17,7 @@ public class Offers {
             }
 
     public List<String> stringToList(String text) {
+        // загугли что называют предложением. на какие знаки препинания оно заканчивается?)
         return Arrays.asList(text.split("\\n"));
     }
 
