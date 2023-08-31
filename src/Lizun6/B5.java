@@ -12,7 +12,7 @@ public class B5 {
         String[] arrayVersh = versh.split("\\s");
 
         for (String s : arrayVersh) {
-            Matcher mat = newWord.matcher(s);
+            Matcher mat = newWord.matcher(s); // вот тут посмотри дебагером что не так в коде.
             while (mat.find()) // это условие всегда false, поэтому в консоль ничего не выводится.
                 System.out.println(mat.group());
         }
