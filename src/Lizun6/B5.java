@@ -8,13 +8,13 @@ import static hometasks.appendix.Versh.versh;
 public class B5 {
     public static void main(String[] args) {
 
-        Pattern newWord = Pattern.compile("\\b(?iu)[іуеаояию].*");
+        Pattern newWord = Pattern.compile("\\b(?iu)[іуеаояию].*", Pattern.UNICODE_CHARACTER_CLASS);
         String[] arrayVersh = versh.split("\\s");
 
         for (String s : arrayVersh) {
             Matcher mat = newWord.matcher(s);
             while (mat.find())
-                System.out.println(mat.group());
+                System.out.print(mat.group() + " ,  ");
         }
     }
 }
