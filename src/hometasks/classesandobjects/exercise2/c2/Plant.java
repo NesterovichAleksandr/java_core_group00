@@ -2,9 +2,7 @@ package hometasks.classesandobjects.exercise2.c2;
 
 public class Plant {
     public void grow(){
-
     }
-
 }
 /*
 Создать классы с полями и методами реализующие принципы ООП
@@ -16,6 +14,5 @@ public class Plant {
 - классы потомки должны переопределять методы
 родительского класса.
 - показать пример инкапсуляции.
-
  */
 

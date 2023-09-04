@@ -5,5 +5,4 @@ public class Tiger extends Mammal {
         Tiger tiger = new Tiger();
         tiger.voice();
     }
-
 }

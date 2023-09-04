@@ -5,4 +5,5 @@ public class ForestBird extends Bird {
         ForestBird forestBird = new ForestBird();
         forestBird.voice();
     }
+
 }
