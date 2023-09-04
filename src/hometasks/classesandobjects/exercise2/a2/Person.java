@@ -12,7 +12,7 @@ public class Person {
     }
 
     void walk() {
-    }
+    }//for
 
     public Person(String name, int age, boolean gender) {
         this.name = name;
