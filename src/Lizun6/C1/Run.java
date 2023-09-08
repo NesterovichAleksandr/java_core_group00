@@ -12,7 +12,7 @@ public class Run {
 
         String text = versh.replaceAll("\n", " ");
 
-        String[] arrayVersh = text.split("[\\.\\!\\?]");
+        String[] arrayVersh = text.split("[.!?]");
 
         for (int i = arrayVersh.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
@@ -23,8 +23,7 @@ public class Run {
                 }
             }
         }
-        for (int i = 0; i < arrayVersh.length; i++)
-            System.out.println(arrayVersh[i]);
+        for (String s : arrayVersh) System.out.println(s);
     }
 }
 
