@@ -4,14 +4,12 @@ import static hometasks.appendix.Versh.versh;
 
 public class Run {
     public static void main(String[] args) {
-
         countSymbolsInSentences();
     }
 
     public static void countSymbolsInSentences() {
 
-        String text = versh.replaceAll("\n", " ");
-
+        String text = versh.replaceAll("\n", "");
         String[] arrayVersh = text.split("[.!?]");
 
         for (int i = arrayVersh.length - 1; i > 0; i--) {
@@ -23,7 +21,7 @@ public class Run {
                 }
             }
         }
-        for (String s : arrayVersh) System.out.println(s);
+        for (String s : arrayVersh) System.out.println(s.trim());
     }
 }
 
