@@ -10,7 +10,7 @@ public class Runner {
 
     public static void main(String[] args) {
         initGroup();
-        int size = group.size();
+        int size = 8;
         Scanner scanner = new Scanner(System.in);
         while (!group.isEmpty()) {
             scanner.next();
