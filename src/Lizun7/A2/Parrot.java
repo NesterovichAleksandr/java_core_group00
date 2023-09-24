@@ -5,16 +5,7 @@ public class Parrot {
         System.out.println("Попугаи не могут говорить");
     }
 
-    class Run {
-        public static void main(String[] args) {
-            Parrot parrot = new Parrot() {
-                void say() {
-                    System.out.println("А этот попугай умеет говорить!");
-                }
-            };
-            parrot.say();
-        }
-    }
+
 }
 
 
