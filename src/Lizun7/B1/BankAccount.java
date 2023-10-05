@@ -1,6 +1,7 @@
 package Lizun7.B1;
 
 public class BankAccount {
+    // при создании каждого объекта BankAccount будет присваиваться 256900002, а этот номер должен быть уникальным, хотябы приблизительно.
     private static long numberAccount = 256900002;
     private static int balance = 15000;
 
