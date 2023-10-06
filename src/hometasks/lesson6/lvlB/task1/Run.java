@@ -9,7 +9,7 @@ public class Run {
         Scanner scanner = new Scanner(System.in);
         Pattern wordPattern = Pattern.compile("^[a-zA-Zа-яА-Я]+$");
 
-        System.out.print("Write down your word without whitespaces: ");
+        System.out.print("Write down your word without white spaces: ");
         StringBuilder word = new StringBuilder(scanner.nextLine());
         Matcher matchesWord = wordPattern.matcher(word);
         if (!word.isEmpty() && matchesWord.matches()) {
