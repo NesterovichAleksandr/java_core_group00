@@ -21,7 +21,7 @@ public class Run {
             "Не следует, однако, забывать о том, что консультация с профессионалами из IT играет важную роль...";
 
     public static void main(String[] args) {
-        Pattern wordPattern = Pattern.compile("\\s");
+        Pattern wordPattern = Pattern.compile("\\n\\s\\n|,\\s|\\s|\\n");
         String[] words = testText.split(wordPattern.pattern());
         System.out.println("There are " + words.length + " words in this text");
     }
