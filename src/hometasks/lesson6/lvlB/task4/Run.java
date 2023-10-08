@@ -13,6 +13,7 @@ public class Run {
         String number = scanner.nextLine();
         if (number.strip().matches("^(\\+375|80)(17|25|29|33|44)(\\d{7})$")) {
             String opCode = number.substring(number.length() - 9, number.length() - 7);
+            // по хорошему и весь switch нужно вынести в отдельный метод) да, это не привычно, но точно такой же подход можно увидеть и в самом jdk
             switch (opCode) {
                 case "17":
                     System.out.println("Beltelecom");
