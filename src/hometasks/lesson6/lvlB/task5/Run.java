@@ -11,7 +11,7 @@ public class Run {
     public static void main(String[] args) {
         Pattern wordPattern = Pattern.compile("\\n\\s\\n|,\\s|\\s|\\n");
         String vowels = "aeiouyауоиэыяюеёі";
-        ArrayList<Character> vowelList = new ArrayList<Character>();
+        ArrayList<Character> vowelList = new ArrayList();
         for (int i = 0; i < vowels.length(); i++) {
             vowelList.add(vowels.charAt(i));
         }
