@@ -21,6 +21,10 @@ public class Run {
                     System.out.println("Life:)");
                     break;
                 case "29":
+                    //  с точки зрения чистоты написания кода, вот эту логику лучше вынести в отдельный метод.
+                    //  представь, если на каждый case будет столько строк кода с логикой. читаемо будет?)
+                    //  да, сейчас логика в каждом case проста и мала. но в будущем она может измениться. так вот лучше сразу показать хороший пример написания кода.
+                    //  от
                     char firstDigit = number.charAt(number.length() - 7);
                     if (firstDigit == '1' || firstDigit == '3' || firstDigit == '6' || firstDigit == '9') {
                         System.out.println("A1");
@@ -29,6 +33,7 @@ public class Run {
                     } else {
                         System.out.println("Wrong number");
                     }
+                    //  до
                     break;
                 case "33":
                     System.out.println("MTC");
