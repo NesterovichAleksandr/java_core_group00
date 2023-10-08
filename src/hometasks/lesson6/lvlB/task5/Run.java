@@ -20,9 +20,11 @@ public class Run {
         int count = 0;
         for (int i = 0; i < words.length; i++) {
             if (vowelList.contains(words[i].charAt(0))) { //Не знал считать ли предлоги словами. Поэтому я считал их тоже :)
+                // да, предлоги это тоже слова, на сколько я помню со школы)
                 count++;
             }
         }
         System.out.println(count);
+        // условие задачи: Вывести все ЭТИ СЛОВА в консоль
     }
 }
