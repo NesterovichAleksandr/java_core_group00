@@ -7,7 +7,7 @@ public class NumberArray {
     Number[] myArray = new Number[5];
 
     public Number getElement(int element) {
-        System.out.println(myArray[element]);
+        System.out.println(myArray[element]); // для чистоты кода этой строчки здесь не должно быть
         return myArray[element];
     }
 
