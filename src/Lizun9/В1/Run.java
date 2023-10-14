@@ -14,16 +14,17 @@ public class Run {
         myMassive.setElement(49);
         myMassive.setElement(1058);
         myMassive.setElement(259);
+        myMassive.setElement(111111);
+        myMassive.setElement(111111);
 
-        myMassive.getElement(0);
+        myMassive.printArray();
+
         myMassive.getElement(2);
 
         myMassive.contains(78);
-        myMassive.contains(6);
 
-        myMassive.getIndex(10);
         myMassive.getIndex(8);
 
-        myMassive.printArray();
+        myMassive.delete(3);
     }
 }
