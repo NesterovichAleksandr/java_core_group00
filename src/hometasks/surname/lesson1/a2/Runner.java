@@ -10,7 +10,7 @@ public class Runner {
 
     public static void main(String[] args) {
         initGroup();
-        int size = 8;
+        int size = 4;
         Scanner scanner = new Scanner(System.in);
         while (!group.isEmpty()) {
             scanner.next();
@@ -24,14 +24,10 @@ public class Runner {
     }
 
     static void initGroup() {
-        group.put(1, "Максим");
-        group.put(2, "Юрий");
-        group.put(3, "Анна Д");
-        group.put(4, "Анна Ж");
-        group.put(5, "Владислав");
-        group.put(6, "Наталья");
-        group.put(7, "Евгений");
-        group.put(8, "Владимир");
+        group.put(1, "Юрий");
+        group.put(2, "Анна Ж");
+        group.put(3, "Наталья");
+        group.put(4, "Евгений");
     }
 
     static int getNumber(int size) {
