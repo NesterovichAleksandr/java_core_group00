@@ -6,15 +6,16 @@ public class Array {
     Object[] myArray = new Object[10];
 
     public void setElement(Object element) {
-        for (int i = 0; i < myArray.length; i++)
+        for (int i = 0; i < myArray.length; i++) {
             if (myArray[i] == null) {
                 myArray[i] = element;
                 break;
             }
-
-        if (element == myArray[9]) {
+        }
+        if (!(myArray[9] == null) && !(element == myArray[9])) {
             Object[] myArray2 = new Object[myArray.length * 2];
             System.arraycopy(myArray, 0, myArray2, 0, myArray.length);
+            myArray2[10] = element;
             System.out.println("Новый увеличенный массив" + Arrays.toString(myArray2));
         }
     }
@@ -25,14 +26,12 @@ public class Array {
     }
 
     public void contains(Object element) {
-        for (int i = 0; i < myArray.length; i++) {
-            if (element.equals(myArray[i])) {
-                break;
+        for (Object o : myArray) {
+            if (element.equals(o)) {
+                System.out.println("Элемент " + element + " есть в массиве. ");
             }
         }
-        System.out.println("Элемент " + element + " есть в массиве. ");
     }
-
 
     public Object getIndex(Object element) {
         for (int i = 0; i < myArray.length; i++) {
@@ -54,6 +53,15 @@ public class Array {
             myArray[i] = null;
         }
         System.out.println("Новый массив, без элемента, который был под индексом " + k + " : " + Arrays.toString(myArray));
+    }
 
+    public void delete(Object element) {
+
+        for (int i = 0; i < myArray.length; i++) {
+            if (element.equals(myArray[i])) {
+                myArray[i] = null;
+            }
+        }
+        System.out.println("Новый массив, без элемента  " + element + " : " + Arrays.toString(myArray));
     }
 }
