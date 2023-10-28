@@ -15,16 +15,18 @@ public class Run {
         myMassive.setElement(1058);
         myMassive.setElement(259);
         myMassive.setElement(111111);
-        myMassive.setElement(111111);
+
 
         myMassive.printArray();
 
         myMassive.getElement(2);
 
-        myMassive.contains(78);
+        myMassive.contains(255822);
 
         myMassive.getIndex(8);
 
-        myMassive.delete(3);
+        myMassive.delete(2);
+
+        myMassive.delete("10");
     }
 }
