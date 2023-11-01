@@ -12,9 +12,13 @@ public class Array {
                 break;
             }
         }
+        // по хорошему вынести и ифку в метод, чтобы мы видель только вызов метода и не вникали здесь что за проверка, а вникали только когда зайдём в сам метод.
+        // от сих
         if (!(myArray[9] == null) && !(element == myArray[9])) {
             doubleArray(element);
         }
+
+        // до сих
     }
 
     public void doubleArray(Object element) {
