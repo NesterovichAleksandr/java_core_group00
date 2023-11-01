@@ -61,10 +61,13 @@ public class Array {
     }
 
     public void delete(int k) {
+        //а не лучше вынести этот код в отдельный метод? тогда в этом методе сократится количество строк кода и мы не будем дублировать один и тот же код в разных методах
+        // от сих
         System.out.println("Массив до удаления элемента по индексу : ");
         for (int l = 0; l < myArray.length; l++) {
             System.out.println("Элемент " + myArray[l] + " индекс " + l);
         }
+        // до сих
         myArray[k] = null;
         for (int i = k + 1; i < myArray.length; i++) {
             myArray[i - 1] = myArray[i];
@@ -77,10 +80,12 @@ public class Array {
     }
 
     public void delete(Object element) {
+        // от
         System.out.println("Массив до удаления элемента : ");
         for (int l = 0; l < myArray.length; l++) {
             System.out.println("Элемент " + myArray[l] + " индекс " + l);
         }
+        // до
         for (int i = 0; i < myArray.length - 1; i++) {
             if (element.equals(myArray[i])) {
                 myArray[i] = null;
