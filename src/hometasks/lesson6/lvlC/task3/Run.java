@@ -32,7 +32,7 @@ public class Run {
         StringBuilder randomText = new StringBuilder();
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 10000; i++) {
-            randomText.append(words[random.nextInt(words.length)] + " ");
+            randomText.append(words[random.nextInt(words.length)]).append(" ");
         }
         long endTime = System.currentTimeMillis();
         System.out.println("Fast method time: " + (endTime - startTime));
