@@ -6,8 +6,8 @@ package hometasks.lesson7.lvlA.task1;
 
 public class Run {
     public static void main(String[] args) {
-        University.Student Ivanov = new University().new Student("Ivan", 23);
+        University BSU = new University();
 
-        Ivanov.printInfo();
+        BSU.Ivanov.printInfo();
     }
 }

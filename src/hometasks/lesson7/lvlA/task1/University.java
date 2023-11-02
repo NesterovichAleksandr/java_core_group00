@@ -1,7 +1,7 @@
 package hometasks.lesson7.lvlA.task1;
 
 public class University {
-//    Student Ivanov = new Student("Ivanov", 23);
+    Student Ivanov = new Student("Ivanov", 23);
 
     class Student {
         String name;
