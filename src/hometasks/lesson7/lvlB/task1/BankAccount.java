@@ -6,15 +6,14 @@ public class BankAccount {
     private long accountId;
     private BigDecimal balance = BigDecimal.valueOf(0.0);
 
-    BankAccount() {
+    BankAccount(AccountIdGen accountIdGen) {
         accountId = accountIdGen.nextAccountId;
         accountIdGen.generateNextAccountId();
     }
 
     Transaction transaction = new Transaction();
-    AccountIdGen accountIdGen = new AccountIdGen();
 
-    private static class AccountIdGen {
+    public static class AccountIdGen {
         private long nextAccountId = 1;
 
         private void generateNextAccountId() {
