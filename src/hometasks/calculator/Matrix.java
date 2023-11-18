@@ -1,9 +1,12 @@
 package hometasks.calculator;
 
+import java.util.Arrays;
+
 public class Matrix extends Var implements Operation {
 
-    private double[][] matrixValue;
-    public Matrix(double[][] value) {
+    private Double[][] matrixValue;
+
+    public Matrix(Double[][] value) {
         this.matrixValue = value;
     }
 
@@ -12,12 +15,14 @@ public class Matrix extends Var implements Operation {
     }
 
     public Matrix(String strMatrix) {
-        strToMatrix(strMatrix);
+        this.matrixValue = strToMatrix(strMatrix);
     }
 
-    public double[][] strToMatrix(String strVector) {
-//        String[] vectors = strVector.substring(2, strVector.length() - 2/*3*/).split("\\}\\,\\s\\{");
-//        String[] vector = vectors[0].split("\\,\\s");
-//        return Arrays.stream(vectors).mapToDouble(s -> Arrays.stream(s.split("\\,\\s")).mapToDouble(Double::parseDouble).toArray()).toArray();
+    public Double[][] strToMatrix(String strMatrix) {
+        String[] vectors = strMatrix.substring(2, strMatrix.length() - 2/*3*/).split("\\}\\,\\s\\{");
+        return Arrays.stream(strMatrix.substring(2, strMatrix.length() - 2).split("\\}\\,\\s\\{")).
+                map(s -> Arrays.stream(s.split("\\,\\s")).
+                        map(Double::parseDouble).toArray(Double[]::new)).
+                toArray(Double[][]::new);
     }
 }
