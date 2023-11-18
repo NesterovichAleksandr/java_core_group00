@@ -17,7 +17,6 @@ public class Run {
         }
 
         String[] words = Versh.versh.split(wordPattern.pattern());
-        int count = 0;
         for (int i = 0; i < words.length; i++) {
             if (vowelList.contains(words[i].charAt(0))) {
                 System.out.println(words[i]);

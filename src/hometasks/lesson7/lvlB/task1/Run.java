@@ -9,8 +9,9 @@ import java.math.BigDecimal;
 
 public class Run {
     public static void main(String[] args) {
-        BankAccount ivanov = new BankAccount();
-        BankAccount petrov = new BankAccount();
+        BankAccount.AccountIdGen accountIdGen = new BankAccount.AccountIdGen();
+        BankAccount ivanov = new BankAccount(accountIdGen);
+        BankAccount petrov = new BankAccount(accountIdGen);
 
 
         ivanov.transaction.topUp(BigDecimal.valueOf(200.05));
