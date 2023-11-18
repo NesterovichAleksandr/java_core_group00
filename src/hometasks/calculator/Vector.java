@@ -18,7 +18,7 @@ public class Vector extends Var implements Operation {
     }
 
     public double[] strToVector(String strVector) {
-        String[] vector = strVector.substring(1, strVector.length() - 1/*2*/).split("\\,\\s");
+        String[] vector = strVector.substring(1, strVector.length() - 1).split("\\,\\s");
         return Arrays.stream(vector).mapToDouble(Double::parseDouble).toArray();
     }
 }
