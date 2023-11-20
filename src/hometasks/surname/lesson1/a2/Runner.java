@@ -26,8 +26,7 @@ public class Runner {
     static void initGroup() {
         group.put(1, "Юрий");
         group.put(2, "Анна Ж");
-        group.put(3, "Наталья");
-        group.put(4, "Евгений");
+        group.put(3, "Евгений");
     }
 
     static int getNumber(int size) {
