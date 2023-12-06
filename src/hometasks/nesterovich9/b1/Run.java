@@ -19,6 +19,7 @@ public class Run {
 
         integerArray.printArray();
         integerArray.printArray();
+        integerArray.printArray();
     }
 }
 /*1.Создать обобщённый класс Array, который хранит в себе массив
