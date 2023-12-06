@@ -3,17 +3,10 @@ package hometasks.nesterovich9.a2;
 import java.util.Arrays;
 
 public class Array<T> {
-    private Object[] array;
-    public int arrayLength;
+    private Object[] array = new Object[5];
 
-    public Array(int arrayLength) {
-        array = new Object[arrayLength];
-        this.arrayLength = arrayLength;
-    }
-
-    public T getElement(int element) {
-        T t = (T) array[element];
-        return t;
+    public Object getElement(int element) {
+        return array[element];
     }
 
     public void setElement(int element, T t) {
@@ -22,9 +15,10 @@ public class Array<T> {
 
     @Override
     public String toString() {
-        return "Array{" +
-                "array=" + Arrays.toString(array) +
-                ", arrayLength=" + arrayLength +
-                '}';
+        return "array = " + Arrays.toString(array);
     }
 }
+/*Создать класс Array, который может хранить в себе массив из 5 любых
+объектов. Реализовать методы setElement и getElement которые
+будут сохранять и получать элементы по заданному индексу. В классе
+Run проверить работу класса Array на объектах разного типа.*/
