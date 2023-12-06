@@ -18,6 +18,7 @@ public class Run {
         integerArray.contains("aa");
 
         integerArray.printArray();
+        integerArray.printArray();
     }
 }
 /*1.Создать обобщённый класс Array, который хранит в себе массив
