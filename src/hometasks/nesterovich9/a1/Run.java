@@ -4,6 +4,7 @@ public class Run {
     public static void main(String[] args) {
         Container<Double> container1 = new Container<>();
         Container<Integer> container2 = new Container<>();
+        // а что делать, если в процессе выполнения программы нам нужно будет сохранить в наш контейнер container1 строку?
         container1.setObject(2.3);
         container2.setObject(78);
         container1.print(container1.getObject());
